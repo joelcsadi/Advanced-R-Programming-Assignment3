@@ -60,3 +60,9 @@ fit <- optim(
 
 se_beta <- sqrt(diag(solve(fit$hessian)))[1:4]
 se_beta
+
+# Question 4
+lm_fit <- lm(y~ x1 + x2 + x3 , data = df)
+
+lm_coef<- lm_fit$coefficients
+lm_res_sd <- summary(lm_fit)$sigma
